@@ -5,11 +5,12 @@ def token(request):
         return None, ("missing credentials", 401)
 
     token = request.headers["Authorization"]
+
     if not token:
         return None, ("missing credentials", 401)
 
     response = requests.post(
-        f"https://{os.environ.get('AUTH_SVC_ADDRESS')}/validate",
+        f"http://{os.environ.get('AUTH_SVC_ADDRESS')}/validate",
         headers={"Authorization": token},
     )
 

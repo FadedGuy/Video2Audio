@@ -1,4 +1,4 @@
-CREATE USER 'auth_user'@'localhost' IDENTIFIED BY 'Aauth123';
+CREATE USER 'auth_user'@'localhost' IDENTIFIED BY 'MYSQL_PASSWORD';
 
 CREATE DATABASE auth;
 
@@ -12,4 +12,4 @@ CREATE TABLE user (
     password VARCHAR(255) NOT NULL
 );
 
-INSERT INTO user (email, password) VALUES ('kevin@email.com', 'Admin123')
+INSERT INTO user (email, password) VALUES ('dummy@dummy.com', 'password')
